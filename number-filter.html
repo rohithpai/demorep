@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title>
+
+AngularJs number filter Example
+
+</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<script>
+
+var app = angular.module("AngularnumberApp", []);
+
+app.controller("numberctrl", function ($scope) {
+
+$scope.sampleval = 52343.1435784;
+
+});
+
+</script>
+
+</head>
+
+<body ng-app="AngularnumberApp">
+
+<div ng-controller="numberctrl">
+
+Enter Number: <input type="text" ng-model="sampleval" /><br /><br />
+
+Default Number expression:{{sampleval | number}}<br /><br />
+
+Number with Decimal Value: {{sampleval | number:4}} <br /><br />
+
+Number with Zero Decimals:{{sampleval | number:0}}
+
+</div>
+
+</body>
+
+</html>

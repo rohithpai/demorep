@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>
+
+AngularJs lowercase filter Example
+
+</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<script>
+
+var app = angular.module("AngularlowercaseApp", []);
+
+app.controller("lowercasectrl", function ($scope) {
+
+$scope.users = [{
+
+name: "JOSEPH RINOY LAWRANCE",
+
+age: 23
+
+}, {
+
+name: "Amarnath S Panicker",
+
+age: 24
+
+}, {
+
+name: "DILSHADH Nasreen",
+
+age: 23
+
+}, {
+
+name: "pArVaThY Sajeev",
+
+age: 23
+
+}];
+
+});
+
+</script>
+
+</head>
+
+<body ng-app="AngularlowercaseApp">
+
+<div ng-controller="lowercasectrl">
+
+<ul ng-repeat="user in users  ">
+
+<li>{{user.name | lowercase }}</li>
+
+</ul>
+
+</div>
+
+</body>
+
+</html>

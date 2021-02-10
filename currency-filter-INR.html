@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title>
+
+AngularJs Filters example
+
+</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+</head>
+
+<body>
+
+<div ng-app="">
+
+Enter Number1:<input type="text" ng-model="number1" /><br /><br />
+
+Enter Number2:<input type="text" ng-model="number2" />
+
+<p>Result of Multiplication: {{number1 * number2 | currency:"₹":0}}</p>
+
+</div>
+
+</body>
+
+</html>

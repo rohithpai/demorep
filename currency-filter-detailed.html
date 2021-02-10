@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title>
+
+AngularJs Currency filter Example
+
+</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<script>
+
+var app = angular.module("AngularcurrencyApp", []);
+
+app.controller("currencyctrl", function ($scope) {
+
+$scope.sampleval = 52343.1435784;
+
+});
+
+</script>
+
+</head>
+
+<body ng-app="AngularcurrencyApp">
+
+<div ng-controller="currencyctrl">
+
+Enter Number: <input type="text" ng-model="sampleval" /><br /><br />
+
+Default Currency expression:{{sampleval | currency}}<br /><br />
+
+Currency with Custom Value: {{sampleval | currency : "USD$"}} <br /><br />
+
+Currency with Zero Decimals: {{sampleval | currency : "USD$" : 0}}
+
+</div>
+
+</body>
+
+</html>
